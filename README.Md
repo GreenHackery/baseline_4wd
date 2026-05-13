@@ -2,7 +2,7 @@
 ```
 ros2 launch tomauto1_description display.launch.xml
 
-ros2 launch my_robot_bringup my_robot.launch.xml
+ros2 launch base_4wd_bringup base_4wd.launch.xml
 ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r /cmd_vel:=/diff_drive_controller/cmd_vel -p stamped:=true
 ```
 ## Run terminator layout
@@ -26,7 +26,7 @@ terminator -l launch_ros
     [[[child1]]]
       type = Terminal
       parent = window0
-  [[launch_ros]]
+  [[launch_4wd]]
     [[[window0]]]
       type = Window
       parent = ""
@@ -37,12 +37,12 @@ terminator -l launch_ros
       type = Terminal
       parent = child1
       profile = default
-      command = bash -c "cd /home/daniel/projects/foodlikeair/tomauto1; ros2 launch my_robot_bringup my_robot.launch.xml; exec bash"
+      command = bash -c "cd /home/daniel/projects/foodlikeair/baseline_4wd; ros2 launch base_4wd_bringup base_4wd.launch.xml; exec bash"
     [[[terminal2]]]
       type = Terminal
       parent = child1
       profile = default
-      command = bash -c "cd /home/daniel/projects/foodlikeair/tomauto1; ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r /cmd_vel:=/diff_drive_controller/cmd_vel -p stamped:=true; exec bash"
+      command = bash -c "cd /home/daniel/projects/foodlikeair/baseline_4wd; ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r /cmd_vel:=/diff_drive_controller/cmd_vel -p stamped:=true; exec bash"
 [plugins]
 
 
