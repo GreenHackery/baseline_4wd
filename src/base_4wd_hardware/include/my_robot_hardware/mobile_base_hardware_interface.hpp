@@ -29,6 +29,10 @@ private:
     std::shared_ptr<XL330Driver> driver_;
     int left_motor_id_;
     int right_motor_id_;
+    int back_left_motor_id_;
+    int back_right_motor_id_;
+    int front_left_motor_id_;
+    int front_right_motor_id_;
     std::string port_;
 
 }; // class MobileBaseHardwareInterface
