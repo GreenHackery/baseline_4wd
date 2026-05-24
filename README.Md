@@ -37,13 +37,16 @@ terminator -l launch_ros
       type = Terminal
       parent = child1
       profile = default
-      command = bash -c "cd /home/daniel/projects/foodlikeair/baseline_4wd; ros2 launch base_4wd_bringup base_4wd.launch.xml; exec bash"
+      command = bash -c "cd /home/daniel/projects/foodlikeair/baseline_4wd; ros2 launch base_4wd_bringup base_4wd.launch.py; exec bash"
     [[[terminal2]]]
       type = Terminal
       parent = child1
       profile = default
-      command = bash -c "cd /home/daniel/projects/foodlikeair/baseline_4wd; ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r /cmd_vel:=/diff_drive_controller/cmd_vel -p stamped:=true; exec bash"
+      command = basimageviewh -c "cd /home/daniel/projects/foodlikeair/baseline_4wd; ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r /cmd_vel:=/diff_drive_controller/cmd_vel -p stamped:=true; exec bash"
 [plugins]
 
 
 ``` 
+## System dependencies
+- ROS2
+- opencv-python

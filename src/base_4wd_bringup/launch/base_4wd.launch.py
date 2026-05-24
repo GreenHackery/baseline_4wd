@@ -38,6 +38,11 @@ def generate_launch_description():
         arguments=["diff_drive_controller"],
     )
 
+    greenhackery_camera_node = Node(
+        package="greenhackery_camera",
+        executable="image_publisher",
+    );
+
     rviz_node = Node(
         package="rviz2",
         executable="rviz2",
@@ -51,4 +56,5 @@ def generate_launch_description():
         joint_state_broadcaster_spawner,
         diff_drive_controller_spawner,
         rviz_node,
+        greenhackery_camera_node,
     ])
