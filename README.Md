@@ -50,3 +50,8 @@ terminator -l launch_ros
 ## System dependencies
 - ROS2
 - opencv-python
+
+
+## Commands
+`ros2 launch base_4wd_bringup base_4wd.gazebo.launch.xml`
+`ros2 run teleop_twist_keyboard teleop_twist_keyboard`
