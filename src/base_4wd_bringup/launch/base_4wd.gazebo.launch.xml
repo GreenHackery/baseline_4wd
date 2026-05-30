@@ -24,12 +24,16 @@
 
     <node pkg="rviz2" exec="rviz2" output="screen" 
           args="-d $(var rviz_config_path)" />
-
     
     <node 
         pkg="tf2_ros" 
         exec="static_transform_publisher" 
         name="scan_to_map" 
         args="0 0 0 0 0 0 map scan" />
+
+    <include file="$(find-pkg-share slam_toolbox)/launch/online_async_launch.py">
+        <arg name="params_file" value="$(find-pkg-share base_4wd_bringup)/config/mapper_params_online_async.yaml" />
+        <arg name="use_sim_time" value="false" />
+    </include>
 
 </launch>
