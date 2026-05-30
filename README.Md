@@ -55,3 +55,4 @@ terminator -l launch_ros
 ## Commands
 `ros2 launch base_4wd_bringup base_4wd.gazebo.launch.xml`
 `ros2 run teleop_twist_keyboard teleop_twist_keyboard`
+`ros2 launch slam_toolbox online_async_launch.py use_sim_time:=True`
