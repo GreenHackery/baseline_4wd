@@ -56,3 +56,11 @@ terminator -l launch_ros
 `ros2 run teleop_twist_keyboard teleop_twist_keyboard`
 `ros2 launch slam_toolbox online_async_launch.py use_sim_time:=True`
 `ros2 launch nav2_bringup bringup_launch.py map:=/home/daniel/projects/foodlikeair/baseline_4wd/src/base_4wd_bringup/maps/dpt3/dpt3.yaml use_sim_time:=True`
+
+
+Currently this is happening
+
+```
+ros2 rviz loads map when starting nav2 and quickly the map disappears. I get this error CRITICAL FAILURE: SERVER map_server IS DOWN after not receiving a heartbeat for 4000 ms. Shutting down related node
+
+```
