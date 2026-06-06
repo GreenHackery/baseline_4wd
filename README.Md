@@ -55,3 +55,4 @@ terminator -l launch_ros
 `ros2 launch base_4wd_bringup base_4wd.gazebo.launch.xml`
 `ros2 run teleop_twist_keyboard teleop_twist_keyboard`
 `ros2 launch slam_toolbox online_async_launch.py use_sim_time:=True`
+`ros2 launch nav2_bringup bringup_launch.py map:=/home/daniel/projects/foodlikeair/baseline_4wd/src/base_4wd_bringup/maps/dpt3/dpt3.yaml use_sim_time:=True`
