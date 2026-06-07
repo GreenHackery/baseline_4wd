@@ -57,7 +57,12 @@ terminator -l launch_ros
 `ros2 launch slam_toolbox online_async_launch.py use_sim_time:=True`
 `ros2 launch nav2_bringup bringup_launch.py map:=/home/daniel/projects/foodlikeair/baseline_4wd/src/base_4wd_bringup/maps/dpt3/dpt3.yaml use_sim_time:=True`
 
-## To start with nav2 for navigation run simply
+## To start with nav2 manually for navigation run simply
 1. `ros2 launch base_4wd_bringup base_4wd.gazebo.launch.xml`
 2. `ros2 launch nav2_bringup bringup_launch.py map:=/home/daniel/projects/foodlikeair/baseline_4wd/src/base_4wd_bringup/maps/dpt3/dpt3.yaml use_sim_time:=True`
 3. The set 2d pose estimate
+
+## To start mapping
+1. `ros2 launch base_4wd_bringup base_4wd_cartophgrapher.launch.xml`
+2. Drive around create the map
+3. `ros2 run nav2_map_server map_saver_cli -f /path/to/my_map`
