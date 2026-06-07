@@ -26,13 +26,12 @@
     <node pkg="rviz2" exec="rviz2" output="screen" 
           args="-d $(var rviz_config_path)" />
 
-    <!-- <node pkg="nav2_bringup"
-        exec="bringup_launch.py"
-        name="nav2_bringup"
-        output="screen">
-        <param name="map" value="/home/daniel/projects/foodlikeair/baseline_4wd/src/base_4wd_bringup/maps/dpt3/dpt3.yaml"/>
-        <param name="use_sim_time" value="True"/>
-    </node> -->
+    <include file="$(find-pkg-share nav2_bringup)/launch/bringup_launch.py">
+        <arg name="map"
+             value="/home/daniel/projects/foodlikeair/baseline_4wd/src/base_4wd_bringup/maps/dpt3/dpt3.yaml"/>
+
+        <arg name="use_sim_time" value="True"/>
+    </include>
     
     <!-- <node 
         pkg="tf2_ros" 
