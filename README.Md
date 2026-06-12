@@ -66,3 +66,6 @@ terminator -l launch_ros
 1. `ros2 launch base_4wd_bringup base_4wd_cartophgrapher.launch.xml`
 2. Drive around create the map
 3. `ros2 run nav2_map_server map_saver_cli -f /path/to/my_map`
+
+## Useful resources
+1. Lidar code: https://github.com/ldrobotSensorTeam/ldlidar_stl_ros2/tree/master/ldlidar_driver
